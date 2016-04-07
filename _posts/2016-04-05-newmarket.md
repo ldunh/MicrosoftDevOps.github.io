@@ -72,6 +72,8 @@ By enabling this build definition, the bottleneck for waiting for manual builds 
 
 Next, the automated tests that were typically run by QA later in the process were introduced as Visual Studio Test tasks in automated builds. The shorter tests (such as unit tests and a smaller list of feature tests) were added into the continuous integration build, and the longer tests were added into a scheduled nightly build. Previously, a manual process by quality assurance was involved to categorize tests, but NewMarket could categorize in test classes and test methods and include that as part of the build definition and quality of the build. 
 
+UPDATE: add screenshot
+
 By running tests earlier in the development process with the builds, NewMarket was able to identify defects and bugs earlier in the process, remove the two-week regression cycle, and ultimately lead to a better product to customers. 
 
 ###Configuration as Code with Powershell DSC
