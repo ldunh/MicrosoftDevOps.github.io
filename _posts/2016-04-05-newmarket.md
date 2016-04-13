@@ -83,30 +83,33 @@ By running tests earlier in the development process with the builds, NewMarket w
 
 ###Configuration as Code with PowerShell DSC
 
-NewMarket created a PowerShell DSC script to configure the virtual machine dependencies and install the build. This helped to eliminate the delay of a release engineer to manually click through a GUI InstallShield wizard to do the same steps.
+NewMarket created a PowerShell DSC script to configure the virtual machine dependencies and install the build. This helped to eliminate the wait for a release engineer to manually click through a GUI InstallShield wizard to do the same steps.
 
 The PowerShell DSC script had the following steps: 
 
-- Install IIS and dependent services
+- Install Internet Information Services (IIS) and dependent services
 - Set registry permissions and configure registry settings
 
-UPDATE: possibly share actual script
+**UPDATE: possibly share actual script**
 
-The process of using PowerShell DSC and PowerShell to deploy the build and configure the virtual machines began the conversation of a repeatable procedure across the development, staging, and production environments. Reliable deployments removed manual delays and configuration-related issues. By running deployment scripts with PowerShell DSC, InstallerShield installers were no longer needed. This process also opened the possibility of allowing developers and testers to create their own development and QA environments hosted in Azure rather than break the shared development environment. 
+The process of using PowerShell DSC and PowerShell to deploy the build and configure the virtual machines began the conversation of a repeatable procedure across the development, staging, and production environments. Reliable deployments removed manual delays and configuration-related issues. By running deployment scripts with PowerShell DSC, InstallShield installers were no longer needed. This process also opened the possibility of allowing developers and testers to create their own development and QA environments hosted in Azure rather than break the shared development environment. 
 
 > "If we could quickly spin up new environments required to develop against e-Rest API, this would be beneficial to over 75% of those developers." - Jay Hilliard, development team lead
 
+**Laurie to David: above, Jay is the development team lead, but in the team list he is the team development lead. For consistency, which way should it be?**
+
 ## Conclusion ##
-By automating continuous integration builds with Team Foundation Server (TFS) 2015, ensuring consistent configuration of the virtual machines with PowerShell Desired State Configuration (DSC), and removing the two week regression test cycle in and automating functional tests, the lead time from development to production is reduced by 25% and allows for a repeatable build/test/deploy process with opportunities for improvement in other areas of development.
+By automating Continuous Integration builds with TFS 2015, ensuring consistent configuration of the virtual machines with PowerShell DSC, and removing the two-week regression test cycle and automating functional tests, the lead time from development to production is reduced by 25%, allowing for a repeatable build/test/deploy process with opportunities for improvement in other areas of development.
 
-The original lead time from development to deployment: **10 weeks, 1 day, and 10 hours**. The new lead time after a week of improvement with adding continuous integration builds, nightly tests, and automated deployments: **7 weeks, 5 days, 10 hours**. This reduced the best case lead time by **13 days, 4.5 hours**, the lead time with bug fixes by **4 days**.
+The original lead time from development to deployment: **10 weeks, 1 day, and 10 hours**. The new lead time after a week of improvement with adding Continuous Integration builds, nightly tests, and automated deployments: **7 weeks, 5 days, 10 hours**. This reduced the best case lead time by **13 days and 4.5 hours** and the lead time with bug fixes by **4 days**.
 
-Furthermore, feedback was much faster with build/test/deploy with more tests and automatically running nightly versus 2 weeks, and automatically building and deploying versus ~8 hours savings per bug discovered.
+Furthermore, feedback was much faster with tests running automatically each night versus every 2 weeks, and automatically building and deploying saved ~8 hours per bug discovered.
 
-NewMarket now has buy-in from upper management to spend real time in the next program increments with DevOps backlog items in the sprints following for development, quality assurance, operations, and release engineering. 
+NewMarket now has buy-in from upper management to spend real time in the next program increments with DevOps backlog items in the sprints following for development, quality assurance, operations, and release engineering.
+
 ###General Lessons###
 
-When teams work together towards a larger common goal amazing opportunities for collaboration happens, blurring the lines of roles and responsibilities.  For instance, members of different teams of NewMarket made contributions in non-typical areas of responsibility.  A developer wrote code for the PS DSC script which helped eliminate the InstallShield installers, operations and test engineers helped with creating build definitions and build agents.
+When teams work together toward a larger common goal, amazing opportunities for collaboration happen, blurring the lines of roles and responsibilities. For instance, members of different NewMarket teams made contributions in non-typical areas of responsibility.  A developer wrote code for the PowerShell DSC script that helped eliminate the InstallShield installers, and operations and test engineers helped with creating build definitions and build agents.
 
 It is very uncommon for companies to wipe out their current software development lifecycle process, so it is pertinent to start where you are. 
 
