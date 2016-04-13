@@ -11,34 +11,38 @@ color: "blue"
 excerpt: Microsoft teamed up with NewMarket International on November of 2015 to help them begin a DevOps journey, assess where they could make improvements with the most impact, and implement recommendations to better deliver value to their customers.
 ---
 ##NewMarket DevOps Hackfest
-Microsoft teamed up with NewMarket International on November of 2015 to help them begin a DevOps journey, assess where they could make improvements with the most impact, and implement recommendations to better deliver value to their customers.  The DevOps practices which were fully or partially implemented during this hack were:
+Microsoft teamed up with NewMarket International in November 2015 to help them begin a DevOps journey, assess where they could make improvements with the most impact, and implement recommendations to better deliver value to their customers.  The DevOps practices that were fully or partially implemented during this hack were:
 
 - Continuous Integration
 - Automated Testing
 - Configuration as Code
 
-In addition, this hackfest sparked NewMarket to start a permanent DevOps transformation involving the non-technical aspects such as culture, roles, and shared metrics changes.
+In addition, this Hackfest sparked NewMarket to start a permanent DevOps transformation involving the non-technical aspects such as culture, roles, and shared metrics changes.
 
 The core hack team included:
 
 - Jay Hilliard – Team Development Lead, NewMarket
-- Jason Duso - Release Manager, NewMarket
-- Dave Flanders - QA Lead, NewMarket
-- Johnathan Govednik - Cloud Automation Engineer, NewMarket
-- David Tesar (@dtzar) - Senior Technical Evangelist, Microsoft
-- Gil Isaacs - Senior Software Development Engineer, Microsoft
+- Jason Duso – Release Manager, NewMarket
+- Dave Flanders – QA Lead, NewMarket
+- Johnathan Govednik – Cloud Automation Engineer, NewMarket
+- David Tesar (@dtzar) – Senior Technical Evangelist, Microsoft
+- Gil Isaacs – Senior Software Development Engineer, Microsoft
 
 ##Customer Profile
 
-NewMarket is an enterprise that delivers business solutions for hospitality organizations worldwide.  The company has over 40,000 installations, 150,000 users, and is used in 154 countries. NewMarket offers solutions for sales and marketing automation, catering and events, workflow management, and other areas for informing hospitality professionals. One of their web applications, NewMarket Web Services (NWS) e-Rest API, has new features that are released for it every three months and encompasses multiple products.
+NewMarket is an enterprise that delivers business solutions for hospitality organizations worldwide.  The company has more than 40,000 installations and 150,000 users in 154 countries. NewMarket offers solutions for sales and marketing automation, catering and events, workflow management, and other areas for informing hospitality professionals. They release new features every three months for one of their web applications, NewMarket Web Services (NWS) e-Rest API, which encompasses multiple products.
 
 ##Problem Statement
 
-NewMarket involved multiple manual hand-offs to build and test code. In the development phase at NewMarket, developers locally built code then checked in changes to Team Foundation Version Control (TFVC) and manually interacted with a release engineer for them to build the code at the release engineer's availability. Automated and manual tests were run at a two-week regression cycle. 
+NewMarket used multiple manual hand-offs to build and test code. In the development phase, developers built code locally and then checked in changes to Team Foundation Version Control (TFVC), then manually interacted with release engineers who built the code depending on their availability. Automated and manual tests were run at a two-week regression cycle. 
 
-Deployments were also manual and caused increased lead times. A developer communicated with a release engineer or IT to manually deploy a feature to a development environment, typically taking around four days per request to deploy to development or QA. Deployments to staging and production were also manual and could take up to a week for each deployment, with patches falling outside of the process. InstallShield installers were used in the staging environment, but added complexity to the deployment. When manual deployments to environments occurred, there would often be configuration-related issues causing problems. In total, the lead time for deployment from development to production was over ten weeks long and this assumed there were no problems and they only released a single feature.
+Deployments were also manual, causing increased lead times. A developer communicated with a release engineer or IT to manually deploy a feature to a development environment, typically taking around four days per request to deploy to development or QA. Deployments to staging and production were also manual, taking up to a week each, with patches falling outside of the process. 
+
+Laurie to David: Unsure how to insert a full dash.
+NewMarket used InstallShield installers in the staging environment, but this added complexity to the deployment. When manual deployments to environments occurred, configuration-related issues often caused problems. In total, the lead time for deployment from development to production took more than 10 weeks -- if no problems arose and only a single feature was released.
 
 ## Solution, steps, and delivery ##
+Laurie to David: We should avoid having two headings with no text in between. Can you add a sentence or two about getting started, maybe how many days this process took? Or instead, delete one of these headings.
 
 ###Starting from where you are: Value Stream Mapping
 
