@@ -39,6 +39,7 @@ NewMarket used multiple manual hand-offs to build and test code. In the developm
 Deployments were also manual, causing increased lead times. A developer communicated with a release engineer or IT to manually deploy a feature to a development environment, typically taking around four days per request to deploy to development or QA. Deployments to staging and production were also manual, taking up to a week each, with patches falling outside of the process. 
 
 Laurie to David: Unsure how to insert a full dash.
+
 NewMarket used InstallShield installers in the staging environment, but this added complexity to the deployment. When manual deployments to environments occurred, configuration-related issues often caused problems. In total, the lead time for deployment from development to production took more than 10 weeks -- if no problems arose and only a single feature was released.
 
 ## Solution, steps, and delivery ##
@@ -46,17 +47,17 @@ Laurie to David: We should avoid having two headings with no text in between. Ca
 
 ###Starting from where you are: Value Stream Mapping
 
-In order to know where they were headed and where the biggest improvements could be made, NewMarket needed a realistic assessment of where they were at. It was key to understand how every team played a part in the current processes from conception of a feature until the feature reaches a customer's hand in production. The value stream mapping exercise identified the following, from development to production: 
+In order to know where they were headed and where the biggest improvements could be made, NewMarket needed a realistic assessment of where they were at. It was essential to understand the part that each team played in the process, from conception of a feature to final production and release to customers. This is where Value Stream Mapping came in. The exercise helped identify the following, from development to production: 
 
 - Each step involved in each environment and the roles of specific teams.
 - Tools or products used for each step.
 - The estimated lead times for each step, as well as per environment.
 
-There were numerous opportunities identified, but it was decided to focus on the following areas for improvement during the Hackfest: 
+Value Stream Mapping helped the team identify numerous opportunities for improvement. Of those, they decided the Hackfest would focus on the following areas: 
 
-- Automated build and testing with **TFS 2015** would save at least two hours per build of lead time per build, as well as be a foundation to enable other DevOps practices such as automated testing and continuous deployment.
-- A two week test regression cycle was hard set into the release process. ~80% of the tests run during this cycle had the potential to be run automatically with the new build system.  Automatically running the tests nightly could provide justification to eliminate the hard-coded two week regression cycle and significantly reduce the overall lead time and provide faster feedback to developers.
-- The InstallShield process to deploy builds and configure the virtual machine was a manual process taking at least an hour every time there was a new build, so **PowerShell DSC** provided an excellent way to automate the install and enforce configuration of the virtual machines where the app needed to run. 
+- Automated build and testing with **Team Foundation Server (TFS) 2015** could save at least two hours of lead time per build, as well as be a foundation to enable other DevOps practices such as Automated Testing and Continuous Deployment.
+- A two-week test regression cycle was hard-set into the release process. About 80% of the tests run during this cycle had the potential to be run automatically with the new build system. Automatically running the tests nightly could provide justification to eliminate the hard-coded two-week regression cycle and significantly reduce the overall lead time and provide faster feedback to developers.
+- The manual InstallShield process for deploying builds and configuring the virtual machine took at least an hour for each new build, so **PowerShell Desired State Configuration (DSC)** would provide an excellent way to automate the install and enforce configuration of the virtual machines where the app needed to run. 
 
 ###Continuous Integration and Automated Testing with TFS 2015
 
