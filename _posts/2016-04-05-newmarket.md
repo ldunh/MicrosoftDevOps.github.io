@@ -38,9 +38,9 @@ NewMarket used multiple manual hand-offs to build and test code. In the developm
 
 Deployments were also manual, causing increased lead times. A developer communicated with a release engineer or IT to manually deploy a feature to a development environment, typically taking around four days per request to deploy to development or QA. Deployments to staging and production were also manual, taking up to a week each, with patches falling outside of the process. 
 
-Laurie to David: Unsure how to insert a full dash.
+**Laurie to David: Unsure how to insert a full dash.**
 
-NewMarket used InstallShield installers in the staging environment, but this added complexity to the deployment. When manual deployments to environments occurred, configuration-related issues often caused problems. In total, the lead time for deployment from development to production took more than 10 weeks -- if no problems arose and only a single feature was released.
+NewMarket used InstallShield installers in the staging environment, but this added complexity to the deployment. When manual deployments to environments occurred, configuration-related issues often caused problems. In total, the lead time for deployment from development to production took more than 10 weeks—if no problems arose and only a single feature was released.
 
 ## Solution, steps, and delivery ##
 Laurie to David: We should avoid having two headings with no text in between. Can you add a sentence or two about getting started, maybe how many days this process took? Or instead, delete one of these headings.
