@@ -32,11 +32,13 @@ The core hack team included:
 
 [NewMarket] (http://www.newmarketinc.com/) is an enterprise that delivers business solutions for hospitality organizations worldwide.  The company has more than 40,000 installations and 150,000 users in 154 countries. NewMarket offers solutions for sales and marketing automation, catering and events, workflow management, and other areas for informing hospitality professionals. They release new features every three months for one of their web applications, NewMarket Web Services (NWS) e-Rest API, which encompasses multiple products.
 
+**Laurie to David: I wasn't sure why the NWS app was mentioned (above). I see only one other reference to it in this article - in the Jay Hilliard quote. Did the hackfest focus on the process for updating just this app? Otherwise, why is it called out?**
+
 ##Problem Statement
 
 NewMarket used multiple manual hand-offs to build and test code. In the development phase, developers built code locally and then checked in changes to Team Foundation Version Control (TFVC), then manually interacted with release engineers who built the code depending on their availability. Automated and manual tests were run at a two-week regression cycle. 
 
-Deployments were also manual, causing increased lead times. A developer communicated with a release engineer or IT to manually deploy a feature to a development environment, typically taking around four days per request to deploy to development or QA. Deployments to staging and production were also manual, taking up to a week each, with patches falling outside of the process. 
+Deployments were also manual, causing increased lead times. A developer communicated with a release engineer or IT to manually deploy a feature to a development environment, typically taking around four days per request to deploy to development or quality assurance. Deployments to staging and production were also manual, taking up to a week each, with patches falling outside of the process. 
 
 NewMarket used InstallShield installers in the staging environment, but this added complexity to the deployment. When manual deployments to environments occurred, configuration-related issues often caused problems. In total, the lead time for deployment from development to production took more than 10 weeks—if no problems arose and only a single feature was released.
 
