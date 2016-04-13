@@ -108,14 +108,15 @@ Furthermore, feedback was much faster with tests running automatically each nigh
 NewMarket now has buy-in from upper management to spend real time in the next program increments with DevOps backlog items in the sprints following for development, quality assurance, operations, and release engineering.
 
 ###General Lessons###
+The Hackfest team came away with the following insights:
 
-When teams work together toward a larger common goal, amazing opportunities for collaboration happen, blurring the lines of roles and responsibilities. For instance, members of different NewMarket teams made contributions in non-typical areas of responsibility.  A developer wrote code for the PowerShell DSC script that helped eliminate the InstallShield installers, and operations and test engineers helped with creating build definitions and build agents.
+- When teams work together toward a larger common goal, amazing opportunities for collaboration happen, blurring the lines of roles and responsibilities. For instance, members of different NewMarket teams made contributions in non-typical areas of responsibility.  A developer wrote code for the PowerShell DSC script that helped eliminate the InstallShield installers, and operations and test engineers helped with creating build definitions and build agents.
 
-It is very uncommon for companies to wipe out their current software development lifecycle process, so it is pertinent to start where you are. 
+- It is very uncommon for companies to wipe out their current software development lifecycle process, so it is pertinent to start where you are. 
 
-Begin the conversation by running the value stream exercise with team members across different disciplines and show the current process to reveal pain points and bottlenecks. 
+- Begin the conversation by running the value stream exercise with team members across different disciplines and show the current process to reveal pain points and bottlenecks. 
 
-Although the PowerShell DSC details may not align perfectly to every situation, the principles and tasks are generally the same and may be applied in various environments using Windows Server regardless of whether running on bare metal, on-premises, or in Azure.
+- Although the PowerShell DSC details may not align perfectly to every situation, the principles and tasks are generally the same and may be applied in various environments using Windows Server regardless of whether running on bare metal, on-premises, or in Azure.
 
 ##Resources
 
