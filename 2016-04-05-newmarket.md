@@ -10,7 +10,7 @@ color: "blue"
 #image: "{{ site.baseurl }}/images/imagename.png" #should be ~350px tall
 excerpt: Microsoft teamed up with NewMarket International on November of 2015 to help them begin a DevOps journey, assess where they could make improvements with the most impact, and implement recommendations to better deliver value to their customers.
 ---
-##NewMarket DevOps Hackfest
+##NewMarket Journey to DevOps
 Microsoft teamed up with NewMarket International on November of 2015 to help them begin a DevOps journey, assess where they could make improvements with the most impact, and implement recommendations to better deliver value to their customers.  The DevOps practices which were fully or partially implemented during this hack were:
 
 - Continuous Integration
