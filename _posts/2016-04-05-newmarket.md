@@ -30,7 +30,7 @@ The core hack team included:
 
 ##Customer Profile
 
-NewMarket is an enterprise that delivers business solutions for hospitality organizations worldwide.  The company has more than 40,000 installations and 150,000 users in 154 countries. NewMarket offers solutions for sales and marketing automation, catering and events, workflow management, and other areas for informing hospitality professionals. They release new features every three months for one of their web applications, NewMarket Web Services (NWS) e-Rest API, which encompasses multiple products.
+[NewMarket] (http://www.newmarketinc.com/) is an enterprise that delivers business solutions for hospitality organizations worldwide.  The company has more than 40,000 installations and 150,000 users in 154 countries. NewMarket offers solutions for sales and marketing automation, catering and events, workflow management, and other areas for informing hospitality professionals. They release new features every three months for one of their web applications, NewMarket Web Services (NWS) e-Rest API, which encompasses multiple products.
 
 ##Problem Statement
 
@@ -38,12 +38,10 @@ NewMarket used multiple manual hand-offs to build and test code. In the developm
 
 Deployments were also manual, causing increased lead times. A developer communicated with a release engineer or IT to manually deploy a feature to a development environment, typically taking around four days per request to deploy to development or QA. Deployments to staging and production were also manual, taking up to a week each, with patches falling outside of the process. 
 
-**Laurie to David: Unsure how to insert a full dash.**
-
 NewMarket used InstallShield installers in the staging environment, but this added complexity to the deployment. When manual deployments to environments occurred, configuration-related issues often caused problems. In total, the lead time for deployment from development to production took more than 10 weeks—if no problems arose and only a single feature was released.
 
 ## Solution, steps, and delivery ##
-Laurie to David: We should avoid having two headings with no text in between. Can you add a sentence or two about getting started, maybe how many days this process took? Or instead, delete one of these headings.
+**Laurie to David: We should avoid having two headings with no text in between. Can you add a sentence or two about getting started, maybe how many days this process took? Or instead, delete one of these headings.**
 
 ###Starting from where you are: Value Stream Mapping
 
@@ -61,27 +59,29 @@ Value Stream Mapping helped the team identify numerous opportunities for improve
 
 ###Continuous Integration and Automated Testing with TFS 2015
 
-NewMarket had recently upgraded their TFS 2012 server to TFS 2015, but had no plans on using the build system.
-The first part of the Hackfest implemented a new build definition with a continuous integration (CI) trigger. The build would run every time a check in occurred from a developer and compile the code with MSBuild.
+NewMarket had recently upgraded their TFS 2012 server to TFS 2015, but had no plans to use the build system.
+The first part of the Hackfest implemented a new build definition with a Continuous Integration (CI) trigger. The build would run every time a developer checked in code and it would compile the code with MSBuild.
 
-The continuous integration build process included the following steps: 
+The Continuous Integration build process included the following steps: 
 
 - Compile the code
 - Run unit tests against the code
-- Produce the *ApplicationCode* package.
-- Produce the *DeploymentScripts* package (from a folder within the repo).
+- Produce the *ApplicationCode* package
+- Produce the *DeploymentScripts* package (from a folder within the repo)
 
-UPDATE: add screenshot
+**UPDATE: add screenshot**
 
-By enabling this build definition, the bottleneck for waiting for manual builds was eliminated. They removed the custom-built website running on a VM for developers to request a new build and replaced that with simply being able to access the TFS build service website.  Developers also received immediate feedback from the automated builds if their changes broke the build and were able to address the issues quickly without reacquiring context a week later. This was important for NewMarket to better embrace DevOps practices with agility.  
+Enabling this build definition eliminated the bottleneck of waiting for manual builds. They removed the custom-built website running on a VM for developers to request a new build and replaced that with simply being able to access the TFS build service website.  Developers also received immediate feedback from the automated builds if their changes broke the build and were able to address the issues quickly without reacquiring context a week later. This was important for NewMarket to better embrace DevOps practices with agility.  
 
-Next, the automated tests that were typically run by QA later in the process were introduced as Visual Studio Test tasks in automated builds. The shorter tests (such as unit tests and a smaller list of feature tests) were added into the continuous integration build, and the longer tests were added into a scheduled nightly build. Previously, a manual process by quality assurance was involved to categorize tests, but NewMarket could categorize in test classes and test methods and include that as part of the build definition and quality of the build. 
+Next, the automated tests that were typically run by QA later in the process were introduced as Visual Studio Test tasks in automated builds. The shorter tests (such as unit tests and a smaller list of feature tests) were added into the Continuous Integration build, and the longer tests were added into a scheduled nightly build. Previously, a manual process by QA was involved to categorize tests, but NewMarket could categorize in test classes and test methods and include that as part of the build definition and quality of the build. 
 
-UPDATE: add screenshot
+**UPDATE: add screenshot**
 
-By running tests earlier in the development process with the builds, NewMarket was able to identify defects and bugs earlier in the process, remove the two-week regression cycle, and ultimately lead to a better product to customers. 
+By running tests earlier in the development process with the builds, NewMarket was able to identify defects and bugs sooner, remove the two-week regression cycle, and ultimately provide a better product to customers. 
 
-###Configuration as Code with Powershell DSC
+**Laurie to David: In the above sentence, are they providing a better product, or getting the product out quicker? (or maybe both)**
+
+###Configuration as Code with PowerShell DSC
 
 NewMarket created a PowerShell DSC script to configure the virtual machine dependencies and install the build. This helped to eliminate the delay of a release engineer to manually click through a GUI InstallShield wizard to do the same steps.
 
