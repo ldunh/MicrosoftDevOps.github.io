@@ -78,8 +78,6 @@ Next, the automated tests that were typically run by QA later in the process wer
 
 By running tests earlier in the development process with the builds, NewMarket was able to identify defects and bugs sooner, remove the two-week regression cycle, and ultimately provide a better product to customers. 
 
-**Laurie to David: In the above sentence, are they providing a better product, or getting the product out quicker? (or maybe both)**
-
 ###Configuration as Code with PowerShell DSC
 
 NewMarket created a PowerShell DSC script to configure the virtual machine dependencies and install the build. This helped to eliminate the wait for a release engineer to manually click through a GUI InstallShield wizard to do the same steps.
@@ -93,9 +91,7 @@ The PowerShell DSC script had the following steps:
 
 The process of using PowerShell DSC and PowerShell to deploy the build and configure the virtual machines began the conversation of a repeatable procedure across the development, staging, and production environments. Reliable deployments removed manual delays and configuration-related issues. By running deployment scripts with PowerShell DSC, InstallShield installers were no longer needed. This process also opened the possibility of allowing developers and testers to create their own development and QA environments hosted in Azure rather than break the shared development environment. 
 
-> "If we could quickly spin up new environments required to develop against e-Rest API, this would be beneficial to over 75% of those developers." - Jay Hilliard, development team lead
-
-**Laurie to David: above, Jay is the development team lead, but in the team list he is the team development lead. For consistency, which way should it be?**
+> "If we could quickly spin up new environments required to develop against e-Rest API, this would be beneficial to over 75% of those developers." - Jay Hilliard, team development lead
 
 ## Conclusion ##
 By automating Continuous Integration builds with TFS 2015, ensuring consistent configuration of the virtual machines with PowerShell DSC, and removing the two-week regression test cycle and automating functional tests, the lead time from development to production is reduced by 25%, allowing for a repeatable build/test/deploy process with opportunities for improvement in other areas of development.
