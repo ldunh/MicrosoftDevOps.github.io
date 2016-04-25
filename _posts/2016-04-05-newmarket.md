@@ -43,9 +43,6 @@ Deployments for the app were also manual, causing increased lead times. A develo
 NewMarket used InstallShield installers in the staging environment, but this added complexity to the deployment. When manual deployments to environments occurred, configuration-related issues often caused problems. In total, the lead time for deployment from development to production took more than 10 weeks—if no problems arose and only a single feature was released.
 
 ## Solution, steps, and delivery ##
-**Laurie to David: We should avoid having two headings with no text in between. Can you add a sentence or two about getting started, maybe how many days this process took? Or instead, delete one of these headings.**
-
-###Starting from where you are: Value Stream Mapping
 
 In order to know where they were headed and where the biggest improvements could be made, NewMarket needed a realistic assessment of where they were at. It was essential to understand the part that each team played in the process, from conception of a feature to final production and release to customers. This is where Value Stream Mapping came in. The exercise helped identify the following, from development to production: 
 
